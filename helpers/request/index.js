@@ -41,7 +41,7 @@ const login = async (creds, logger) => {
       return global.user = {
         firstName: fullName.split(' ')[0],
         lastName: fullName.split(' ')[1],
-        phpsessid: sessionID.replace('PHPSESSID=', ''),
+        phpsessid: sessionID,
         cookieHeader: cookieHeader,
       };
     });
@@ -59,7 +59,7 @@ const getHeaders = async () => {
       'Content-Type': 'application/x-www-form-urlencoded',
       'User-Agent': 'User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:65.0) Gecko/20100101 Firefox/65.0',
       'Cache-Control': 'no-cache',
-      'Cookie': `PHPSESSID=${global.user.phpsessid || ''}`,
+      'Cookie': `${global.user.phpsessid || ''}`,
     },
     transform: function (body) {
       return cheerio.load(body);
