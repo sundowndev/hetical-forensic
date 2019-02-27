@@ -1,20 +1,20 @@
 # hetic-console
 
-Aggrégateur d'OSINT pour [l'intranet d'HETIC](https://outils.hetic.net/), OGP et OGI compris.
+Agrégateur d'OSINT pour [l'intranet d'HETIC](https://outils.hetic.net/), OGP et OGI compris.
 
 Cet outil en ligne de commande permet de collecter les données de l'intranet d'HETIC et de constituer une base de données alternative permettant le listing et l'analyse des étudiants. Cela nous permet d'obtenir l'ensemble des étudiants de l'école, classés par promotion avec leur photo, nom, prénom, promotion, adresse email et dans certains cas le numéro de téléphone. En collectant les données des entreprises et leur fiche, nous sommes en mesure de créer un nuage de mots clés par entreprise, ce qui permet d'observer les différents secteurs dans lesquels travaillent ou ont travaillés les héticiens. Cette chronologie nous permet de procéder à cette analyse et de l'étudier dans le temps.
 
-Les données collectés nous permettent aussi d'effectuer des investigations de masse sur tous les étudiants d'HETIC. Notamment pour trouver leurs profils Linkedin, Twitter, ... Vérifier si leurs adresse emails se trouvent dans des bases de données de fuites de données.
+Les données collectés nous permettent aussi d'effectuer des investigations de masse sur tous les étudiants d'HETIC. Notamment pour trouver leurs profils Linkedin, Twitter, ... Ou encore vérifier si leurs adresse emails se trouvent dans des bases de données de fuites de données.
 
-Le shell d'**hetic-console** permet donc de :
+Le shell d'hetic-console permet donc de :
 
 - Collecter les données
 - Trier les données avec une syntaxe SQL
-- Exporter les données dans différents formats (sqlite, json, csv)
+- Exporter les données dans différents formats (json, csv)
 
 ## Pourquoi ?
 
-- Parce que le gros data c'est de l'argent
+- Parce que la data c'est de l'argent
 - Parce que l'OSINT c'est cool
 - Parce qu'il serait temps qu'HETIC mette en place une API (?)
 - Pour une conférence sur l'OSINT à HETIC ? :eyes:
@@ -26,7 +26,7 @@ Le shell d'**hetic-console** permet donc de :
 
 ### Jeu de données
 
-**Étudiants** :
+**Étudiants :**
 
 - uid
 - lastName
@@ -42,13 +42,26 @@ Le shell d'**hetic-console** permet donc de :
 
 ### Visualisation de données
 
-- Nombre d'étudiants dans chaque promotins
-- Nombre d'étudiants dans chaque secteur d'activité
+- Évolution du nombre d'étudiants dans chaque promotions
 - Moyenne d'âge dans chaque promotion
-- Évolution du nombre d'étudiants par promotions (graphique)
-- Évolution du nombre d'étudiants par cursus par promotions
+- Évolution du nombre d'étudiants dans chaque secteur d'activité
 - Évolution du nombre d'étudiants dans chaque secteur d'activité par promotions
-- Répartition géographique des étudiants en entreprises toutes promotions confondues (puis évolution de la répartition par promotions) (heatmap)
+- Répartition géographique des étudiants en entreprises toutes promotions confondues, puis évolution par promotions (heatmap)
+
+<div align="center">
+    <img src="https://i.imgur.com/qBP4uH7.png" />
+    <p><i>Évolution du nombre d'étudiants dans chaque promotions (échantillon: Bachelor Web)</i></p>
+</div>
+
+### Investigations OSINT
+
+- Présence des adresses email personnelles dans les fuites de données
+- Présence des adresses email *hetic.net* dans les fuites de données
+- Profils Linkedin des étudiants
+
+<div align="center">
+    <img src="https://i.imgur.com/KcTproT.png" />
+</div>
 
 ## Installation
 
@@ -59,13 +72,13 @@ $ npm install
 
 ## Usage
 
-Launch the tool :
+Lancer le programme :
 
 ```
 $ node index.js
 ```
 
-The following help message should comes up :
+Utilisez `help` pour afficher les commandes disponibles :
 
 ```
 help                      Display this help message
@@ -75,26 +88,29 @@ status                    Check authentication status
 pull                      Pull module data from outils.hetic.net
 show <module>             Display modules list
 export <type>             Export data to json or sql
-select <statement>        Get data using sql statement
 ```
 
-#### Examples :
+Commencez par vous connecter :
 
-Fetch all *students* :
-
-```sql
-pull students
+```
+hconsole > connect
 ```
 
-Show *students* table structure :
+Récupérez les données :
 
-```sql
-show students
+```
+hconsole > pull
 ```
 
-Export all *students* who are from 2015 promotion :
+Afficher le dataset *students* :
 
-```sql
-# select <fields> from <module> [conditions]
-select * from students where promotion=2015
+```
+hconsole > show students
+```
+
+Exporter les données :
+
+```
+# Les données se trouveront dans le dossier data
+hconsole > export json
 ```
