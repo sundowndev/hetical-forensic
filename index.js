@@ -2,6 +2,7 @@ const path = require('path');
 const immersive = require('immersive');
 
 const req = require('./helpers/request');
+const jsonToCsv = require('./helpers/jsonToCsv');
 
 const config = {
   // Application name used for config persistence (required)
@@ -21,10 +22,12 @@ const config = {
   },
   helpers: {
     req,
+    jsonToCsv,
   }
 };
 
-global.user = {};
+global.rootPath = path.dirname(__filename);
+global.user = {}
 global.data = {};
 
 immersive(config);
