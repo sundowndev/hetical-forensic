@@ -74,7 +74,7 @@ export const action = async ({ logger }) => {
                     student.picture = `https://outils.hetic.net/external/picture/${student.uid}`;
                     student.enterprise = $('td:nth-child(3)', this).text() || null;
                     student.country = $('td:nth-child(4)', this).text() || 'France';
-                    student.promotion = promotion;
+                    student.promotion = parseInt(promotion);
 
                     await rp({
                         followAllRedirects: true,
@@ -89,21 +89,21 @@ export const action = async ({ logger }) => {
                             return cheerio.load(body);
                         },
                     })
-                            .then(function ($) {
-                                let secondLi = $('.left .item:nth-child(1) ul li:nth-child(2)').text();
+                        .then(function ($) {
+                            let secondLi = $('.left .item:nth-child(1) ul li:nth-child(2)').text();
 
-                                student.email = $('.left .item:nth-child(1) ul li:nth-child(1)').text() || null;
-                                student.cursus = $('.right.right_first .infos h3').text().replace(` P${student.promotion}`, '') || null;
+                            student.email = $('.left .item:nth-child(1) ul li:nth-child(1)').text() || null;
+                            student.cursus = $('.right.right_first .infos h3').text().replace(` P${student.promotion}`, '') || null;
 
-                                if (secondLi.match(/^(?:n\é\(e\)\ le\ )(?:.*)/)) {
-                                    secondLi = secondLi.replace('né(e) le ', '') || null;
-                                    secondLi = secondLi.split('/');
+                            if (secondLi.match(/^(?:n\é\(e\)\ le\ )(?:.*)/)) {
+                                secondLi = secondLi.replace('né(e) le ', '') || null;
+                                secondLi = secondLi.split('/');
 
-                                    student.birthdate = new Date(`${secondLi[2]}-${secondLi[1]}-${secondLi[0]}`);
-                                } else if (secondLi.match(/^[0-9]{8,}/)) {
-                                    student.phone = secondLi || null;
-                                }
-                            })
+                                student.birthdate = new Date(`${secondLi[2]}-${secondLi[1]}-${secondLi[0]}`);
+                            } else if (secondLi.match(/^[0-9]{8,}/)) {
+                                student.phone = secondLi || null;
+                            }
+                        })
 
                     let studentObj = {
                         uid: student.uid,
