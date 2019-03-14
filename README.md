@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://i.imgur.com/Fcf1XqL.png" />
+    <img src="https://i.imgur.com/ocdw6I6.png" />
     <strong>Agrégateur d'OSINT pour <a href="https://outils.hetic.net/">l'intranet d'HETIC</a>, OGP et OGI compris.</strong>
 </p>
 
