@@ -1,6 +1,11 @@
-# hetic-console
+<p align="center">
+    <img src="https://i.imgur.com/Fcf1XqL.png" />
+    <strong>Agrégateur d'OSINT pour <a href="https://outils.hetic.net/">l'intranet d'HETIC</a>, OGP et OGI compris.</strong>
+</p>
 
-Agrégateur d'OSINT pour [l'intranet d'HETIC](https://outils.hetic.net/), OGP et OGI compris.
+----
+
+## A propos
 
 Cet outil en ligne de commande permet de collecter les données de l'intranet d'HETIC et de constituer une base de données alternative permettant le listing et l'analyse des étudiants. Cela nous permet d'obtenir l'ensemble des étudiants de l'école, classés par promotion avec leur photo, nom, prénom, promotion, adresse email et dans certains cas le numéro de téléphone. En collectant les données des entreprises et leur fiche, nous sommes en mesure de créer un nuage de mots clés par entreprise, ce qui permet d'observer les différents secteurs dans lesquels travaillent ou ont travaillés les héticiens. Cette chronologie nous permet de procéder à cette analyse et de l'étudier dans le temps.
 
