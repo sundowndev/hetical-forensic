@@ -47,6 +47,7 @@ Le shell d'hetic-console permet donc de :
 - Évolution du nombre d'étudiants dans chaque secteur d'activité
 - Évolution du nombre d'étudiants dans chaque secteur d'activité par promotions
 - Répartition géographique des étudiants en entreprises toutes promotions confondues, puis évolution par promotions (heatmap)
+- Répartition des fournisseurs de boîtes mails (gmail, outlook, protonmail ...) pour chaque étudiant
 
 <div align="center">
     <img src="https://i.imgur.com/qBP4uH7.png" />
