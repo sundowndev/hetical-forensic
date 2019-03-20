@@ -69,6 +69,11 @@ Le shell d'hetic-console permet donc de :
     <img src="https://i.imgur.com/KcTproT.png" />
 </div>
 
+<div align="center">
+    <img src="https://i.imgur.com/rP0jtnX.png" />
+    <sub>Email OSINT investigation</sub>
+</div>
+
 ## Installation
 
 ```
