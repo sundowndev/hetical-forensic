@@ -62,13 +62,13 @@ Les données collectés nous permettent aussi d'effectuer des investigations de 
 <div align="center">
     <img src="https://i.imgur.com/KcTproT.png" />
     <br>
-    <sub>Recherche de profil Linkedin</sub>
+    <p><sub>Recherche de profil Linkedin</sub><p>
 </div>
 
 <div align="center">
     <img src="https://i.imgur.com/rP0jtnX.png" />
     <br>
-    <sub>Investigation OSINT sur des adresses email.</sub>
+    <p><sub>Investigation OSINT sur des adresses email.</sub><p>
 </div>
 
 ## Installation
