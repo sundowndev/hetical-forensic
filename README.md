@@ -71,6 +71,7 @@ Le shell d'hetic-console permet donc de :
 
 <div align="center">
     <img src="https://i.imgur.com/rP0jtnX.png" />
+    <br>
     <sub>Email OSINT investigation</sub>
 </div>
 
