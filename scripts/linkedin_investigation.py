@@ -2,7 +2,7 @@
 from googlesearch import search
 import json
 
-with open('../data/db.json') as f:
+with open('./data/db.json') as f:
     data = json.load(f)
 
 for student in data['students']:
