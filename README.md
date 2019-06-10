@@ -14,10 +14,10 @@ Les données collectés nous permettent aussi d'effectuer des investigations de 
 ## Pourquoi ?
 
 - Parce que la data c'est de l'argent
-- Parce que l'OSINT c'est cool
+- Parce que l'OSINT c'est cool 😎
 - Parce qu'il serait temps qu'HETIC mette en place une API (?)
 - Pour une conférence sur l'OSINT à HETIC ? :eyes:
-- Pour sensibiliser à la protection des données personnelles
+- Pour sensibiliser à la protection des données personnelles, aux fuites de données et au [SOCINT](https://en.wikipedia.org/wiki/Social_media_intelligence)
 
 ## Vue d'ensemble des données collectés
 
@@ -38,6 +38,8 @@ Les données collectés nous permettent aussi d'effectuer des investigations de 
 - promotion
 - enterprise
 - country
+
+![](https://i.imgur.com/9q1Y3C2.png)
 
 ### Visualisation de données
 
