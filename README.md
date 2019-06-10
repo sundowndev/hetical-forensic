@@ -97,7 +97,7 @@ disconnect                Log out from outils.hetic.net
 status                    Check authentication status
 pull                      Pull module data from outils.hetic.net
 show <module>             Display modules list
-export <type>             Export data to json or sql
+export <type>             Export data to json or csv
 ```
 
 Se connecter à l'intranet :
