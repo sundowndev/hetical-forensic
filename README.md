@@ -5,11 +5,13 @@
 
 ----
 
+*Ce projet a été **abandonné** et n'est donc plus maintenu.*
+
 ## A propos
 
-Cet outil en ligne de commande permet de collecter les données de l'intranet d'HETIC et de constituer une base de données alternative permettant le listing et l'analyse des étudiants. Cela nous permet d'obtenir l'ensemble des étudiants de l'école, classés par promotion avec leur photo, nom, prénom, promotion, adresse email et dans certains cas le numéro de téléphone. En collectant les données des entreprises et leur fiche, nous sommes en mesure de créer un nuage de mots clés par entreprise, ce qui permet d'observer les différents secteurs dans lesquels travaillent ou ont travaillés les héticiens. Cette chronologie nous permet de procéder à cette analyse et de l'étudier dans le temps.
+Ce projet permet de collecter les données de l'intranet d'HETIC et de constituer une base de données permettant le listing et l'analyse des étudiants. Cela nous permet d'obtenir l'ensemble des étudiants de l'école, classés par promotion avec un ensemble de données personnelles les concernants. En collectant les données des entreprises et leur fiche, nous sommes en mesure d'observer les différents secteurs dans lesquels travaillent ou ont travaillés les héticiens.
 
-Les données collectés nous permettent aussi d'effectuer des investigations de masse sur tous les étudiants d'HETIC. Notamment pour trouver leurs profils sur les réseaux sociaux, ou encore vérifier si leurs adresse emails se trouvent dans des fuites de données. Le programme permet donc de collecter les données et de les exporter les données dans différents formats (json, csv).
+Les données collectés nous permettent aussi d'effectuer des investigations de masse sur tous les étudiants d'HETIC. Notamment pour trouver leurs profils sur les réseaux sociaux, ou encore vérifier si leurs adresse emails se trouvent dans des fuites de données. Le programme permet de collecter les données et de les exporter les données dans différents formats (json, csv).
 
 ## Pourquoi ?
 
